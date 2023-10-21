@@ -5,6 +5,8 @@ import Loader from '../components/UI/Loader'
 // const Header = lazy(() => import('../components/Header'));
 const Dashboard = lazy(() => import('../components/Dashboard/Dashboard'));
 const CreateAds = lazy(() => import('../components/CreateAds/CreateAds'));
+const TextAdForm = lazy(() => import('../components/CreateAds/TextAdForm'));
+const MediaAdForm = lazy(() => import('../components/CreateAds/MediaAdForm'));
 
 const Routing = () => {
     return (
@@ -12,7 +14,12 @@ const Routing = () => {
             <Routes>
                 <Route path='/' element={<Outlet />} >
                     <Route index element={<Dashboard />} />
-                    <Route path='/createads' element={<CreateAds />} />
+                </Route>
+
+                <Route path='/create' element={<Outlet />} >
+                    <Route path='ads' element={<CreateAds />} />
+                    <Route path='ad-text' element={<TextAdForm />} />
+                    <Route path='ad-media' element={<MediaAdForm />} />
                 </Route>
             </Routes>
         </Suspense>

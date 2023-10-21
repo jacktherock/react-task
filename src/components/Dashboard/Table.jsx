@@ -3,17 +3,17 @@ import React from 'react'
 
 const Table = () => {
     return (
-        <div className='overflow-y-scroll md:overflow-y-scroll lg:overflow-hidden'>
-            <div className='grid grid-col-1'>
-                <div className='grid grid-cols-2 px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3 border-l border-r border-t'>
-                    <p className="text-start text-sm lg:text-base">
-                        Ad Insights
-                    </p>
-                    <div className='flex justify-end'>
-                        <HelpCircle className='w-5 h-5 lg:w-6 lg:h-6' />
-                    </div>
-                </div>
-                <table className="table-auto border w-full">
+        <div className='border rounded-md'>
+
+            <div className='flex justify-between px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3 border-b'>
+                <p className="text-sm font-semibold lg:text-base">
+                    Ad Insights
+                </p>
+                <HelpCircle className='w-5 h-5 lg:w-6 lg:h-6 opacity-10' />
+            </div>
+
+            <div className='overflow-auto'>
+                <table className=" table-auto rounded-md w-full">
                     <thead className="border-b">
                         <tr>
                             <th className='text-start  text-sm lg:text-base font-semibold px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3'>Campaigns</th>
@@ -66,7 +66,7 @@ const Table = () => {
                             <td className='text-end text-sm lg:text-base px-3 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3'>189</td>
                             <td className='text-end text-sm lg:text-base px-3 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3'>USD 623,106</td>
                         </tr>
-                        <tr className='border-b bg-gray-100/50'>
+                        <tr className='bg-gray-100/50'>
                             <td className='text-start text-sm lg:text-base px-3 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3'>Total</td>
                             <td className='text-end text-sm lg:text-base px-3 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3'>26,510</td>
                             <td className='text-end text-sm lg:text-base px-3 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3'>USD 1,43,819</td>
@@ -76,6 +76,7 @@ const Table = () => {
                     </tbody>
                 </table>
             </div>
+
         </div>
 
     )

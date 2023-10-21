@@ -1,19 +1,20 @@
 import { HelpCircle } from 'lucide-react'
 import React from 'react'
 
-const Table = () => {
+const Table2 = () => {
     return (
-        <div className='overflow-y-scroll lg:overflow-hidden'>
-            <div className='grid grid-col-1'>
-                <div className='grid grid-cols-2 px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3 border-l border-r border-t'>
-                    <p className="text-start text-sm lg:text-base">
-                        Ad Insights
-                    </p>
-                    <div className='flex justify-end'>
-                        <HelpCircle className='w-5 h-5 lg:w-6 lg:h-6' />
-                    </div>
+        <div>
+            <div className='flex justify-between px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3 border-b'>
+                <p className="text-sm font-semibold lg:text-base">
+                    Ad Insights
+                </p>
+                <div className='flex space-x-4'>
+                    <HelpCircle className='w-5 h-5 lg:w-6 lg:h-6 opacity-10' />
                 </div>
-                <table className="table-auto border w-full">
+            </div>
+
+            <div className='overflow-auto pb-20'>
+                <table className="table-auto w-full">
                     <thead className="border-b">
                         <tr>
                             <th className='text-start  text-sm lg:text-base font-semibold px-3 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 lg:px-4 lg:py-3'>Group</th>
@@ -59,4 +60,4 @@ const Table = () => {
     )
 }
 
-export default Table
+export default Table2
