@@ -35,24 +35,25 @@ const CreateAds = () => {
                     <p className="font-semibold">Create Ads</p>
                 </div>
 
-                <div className="grid grid-cols-2 place-items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
+
                     {/* Text Ad */}
-                    <label htmlFor="textAd">
+                    <label htmlFor="textAdChecked">
                         <div
-                            className="rounded-xl max-w-sm w-full mx-auto cursor-pointer"
+                            className="rounded-xl w-72 md:w-80 lg:w-96 mx-auto mb-5 md:mb-0 lg:mb-0 cursor-pointer"
                             style={{ boxShadow: "0px 0px 20px -2px rgba(0,0,0,0.1)" }}
                         >
                             <div className="pt-4 px-4">
                                 <input
                                     type="checkbox"
-                                    id="textAd"
+                                    id="textAdChecked"
                                     className="h-4 w-4"
                                     checked={textAdChecked}
                                     onChange={handleTextAdClick}
                                 />
                             </div>
 
-                            <div className="px-14">
+                            <div className="px-2 pt-2 md:pt-0 lg:pt-0 md:px-7 lg:px-14">
                                 <div className="border-t border-l border-r rounded-t-3xl pt-3 px-4 select-none">
                                     <div className="flex justify-center">
                                         <Circle className="w-3 h-3 opacity-40" />
@@ -67,7 +68,7 @@ const CreateAds = () => {
                                             <div className="animate-pulse py-3 space-y-2">
                                                 <div className="h-2  bg-slate-200 "></div>
                                                 <div className="h-2 bg-slate-200 "></div>
-                                                <div className="h-2 w-48 bg-slate-200 "></div>
+                                                <div className="h-2 w-32 lg:w-48 bg-slate-200 "></div>
                                             </div>
                                             <div className="border rounded-md p-3 space-y-2">
                                                 <p className="text-xs text-blue-700 font-semibold border-b pb-2">
@@ -80,7 +81,7 @@ const CreateAds = () => {
                                             </div>
                                             <div className="animate-pulse py-3 space-y-2">
                                                 <div className="h-2  bg-slate-200 "></div>
-                                                <div className="h-2 w-48 bg-slate-200 "></div>
+                                                <div className="h-2 w-32 lg:w-48 w-48 bg-slate-200 "></div>
                                             </div>
                                         </div>
                                     </div>
@@ -94,21 +95,21 @@ const CreateAds = () => {
                     </label>
 
                     {/* Media Ad */}
-                    <label htmlFor="mediaAd">
+                    <label htmlFor="mediaAdChecked">
                         <div
-                            className="rounded-xl max-w-sm w-full mx-auto cursor-pointer"
+                            className="rounded-xl w-72 md:w-80 lg:w-96 mx-auto mb-5 md:mb-0 lg:mb-0 cursor-pointer"
                             style={{ boxShadow: "0px 0px 20px -2px rgba(0,0,0,0.1)" }}
                         >
                             <div className="pt-4 px-4">
                                 <input
                                     type="checkbox"
-                                    id="mediaAd"
+                                    id="mediaAdChecked"
                                     className="h-4 w-4"
                                     checked={mediaAdChecked}
                                     onChange={handleMediaAdClick}
                                 />
                             </div>
-                            <div className="px-14">
+                            <div className="px-2 pt-2 md:pt-0 lg:pt-0 md:px-7 lg:px-14">
                                 <div className="border-t border-l border-r rounded-t-3xl pt-3 px-4 select-none">
                                     <div className="flex justify-center">
                                         <Circle className="w-3 h-3 opacity-40" />
@@ -123,7 +124,7 @@ const CreateAds = () => {
                                             <div className="animate-pulse py-3 space-y-2">
                                                 <div className="h-2  bg-slate-200 "></div>
                                                 <div className="h-2 bg-slate-200 "></div>
-                                                <div className="h-2 w-48 bg-slate-200 "></div>
+                                                <div className="h-2 w-32 lg:w-48 bg-slate-200 "></div>
                                             </div>
                                             <div className="grid grid-rows-2 grid-flow-col gap-2">
                                                 <img
@@ -157,9 +158,7 @@ const CreateAds = () => {
                 <div className="pt-5 pb-4 px-4 text-end">
                     <button
                         className={`bg-[#0096FF] px-16 py-2 rounded-md text-white ${textAdChecked || mediaAdChecked
-                                ? ""
-                                : "opacity-50 cursor-not-allowed"
-                            }`}
+                            ? "" : "opacity-50 cursor-not-allowed"}`}
                         onClick={handleNextClick}
                         disabled={!textAdChecked && !mediaAdChecked}
                     >

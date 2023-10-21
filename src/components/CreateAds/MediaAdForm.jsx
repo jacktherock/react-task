@@ -10,6 +10,7 @@ const MediaAdForm = () => {
     const handleSubmit = () => {
         setIsSubmitted(true);
 
+        // Redirect to '/create/ads' after 0.6 seconds
         setTimeout(() => {
             navigate("/create/ads");
         }, 600); // 0.6 sec
@@ -32,10 +33,10 @@ const MediaAdForm = () => {
                     <p className="font-semibold">Create Media Ad</p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-x-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10">
                     <div className="space-y-6">
                         <div className="space-y-2">
-                            <label htmlFor="heading1" className="font-semibold capitalize">
+                            <label htmlFor="heading1" className="font-medium md:font-semibold capitalize">
                                 Heading 01
                             </label>
                             <div>
@@ -48,7 +49,7 @@ const MediaAdForm = () => {
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label htmlFor="heading2" className="font-semibold capitalize">
+                            <label htmlFor="heading2" className="font-medium md:font-semibold capitalize">
                                 Heading 02
                             </label>
                             <div>
@@ -62,10 +63,10 @@ const MediaAdForm = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-2">
+                    <div className="space-y-2 mt-6 md:mt-0 lg:mt-0">
                         <label
                             htmlFor="description1"
-                            className="font-semibold capitalize"
+                            className="font-medium md:font-semibold capitalize"
                         >
                             Description 01
                         </label>
@@ -81,9 +82,9 @@ const MediaAdForm = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-x-10 mt-5">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-10 mt-5 space-y-6 md:space-y-0 lg:space-y-0">
                     <div className="space-y-2">
-                        <label htmlFor="business" className="font-semibold capitalize">
+                        <label htmlFor="business" className="font-medium md:font-semibold capitalize">
                             Lanscape marketing image (1.9:1)
                         </label>
                         <div>
@@ -96,7 +97,7 @@ const MediaAdForm = () => {
                         </div>
                     </div>
                     <div className="space-y-2">
-                        <label htmlFor="business" className="font-semibold capitalize">
+                        <label htmlFor="business" className="font-medium md:font-semibold capitalize">
                             Portrait Marketing Image (4:5)
                         </label>
                         <div>
@@ -109,7 +110,7 @@ const MediaAdForm = () => {
                         </div>
                     </div>
                     <div className="space-y-2">
-                        <label htmlFor="business" className="font-semibold capitalize">
+                        <label htmlFor="business" className="font-medium md:font-semibold capitalize">
                             Square Marketing Image (1:1)
                         </label>
                         <div>
@@ -125,7 +126,7 @@ const MediaAdForm = () => {
 
                 <div className="grid grid-cols-1 gap-x-10 mt-6">
                     <div className="space-y-2">
-                        <label htmlFor="business" className="font-semibold capitalize">
+                        <label htmlFor="business" className="font-medium md:font-semibold capitalize">
                             Video URL
                         </label>
                         <div>
@@ -139,9 +140,9 @@ const MediaAdForm = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-x-10 mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10 mt-6 space-y-6 md:space-y-0 lg:space-y-0">
                     <div className="space-y-2">
-                        <label htmlFor="business" className="font-semibold capitalize">
+                        <label htmlFor="business" className="font-medium md:font-semibold capitalize">
                             Business Name
                         </label>
                         <div>
@@ -154,13 +155,13 @@ const MediaAdForm = () => {
                         </div>
                     </div>
                     <div className="space-y-2">
-                        <label htmlFor="buttonLabel" className="font-semibold capitalize">
+                        <label htmlFor="buttonLabel" className="font-medium md:font-semibold capitalize">
                             Button Label
                         </label>
                         <select
                             name="buttonLabel"
                             id="buttonLabel"
-                            className="px-3 py-[0.60rem] ring-1 ring-gray-300 outline-none rounded-sm w-full opacity-60"
+                            className="px-2 bg-white text-gray-600 py-[0.60rem] ring-1 ring-gray-300 outline-none rounded-sm w-full opacity-60"
                         >
                             <option value="" hidden>
                                 Select a label that best suits your ad
@@ -173,9 +174,9 @@ const MediaAdForm = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-x-10 mt-6">
+                <div className="grid grid-cols-1 gap-x-10 my-6">
                     <div className="space-y-2">
-                        <label htmlFor="heading1" className="font-semibold capitalize">
+                        <label htmlFor="heading1" className="font-medium md:font-semibold capitalize">
                             Website URL
                         </label>
                         <div>
@@ -189,16 +190,16 @@ const MediaAdForm = () => {
                     </div>
                 </div>
 
-                <div className="pt-5 pb-4 px-4 text-end space-x-6">
+                <div className="pt-5 pb-4 text-end space-x-6">
                     <button
                         onClick={handleGoBack}
-                        className="bg-gray-100/50 ring-2 ring-gray-200 px-16 py-2 rounded-sm font-medium"
+                        className="bg-gray-100/50 ring-2 ring-gray-200 px-10 lg:px-16 py-2 rounded-sm font-medium"
                     >
                         Back
                     </button>
                     <button
                         onClick={handleSubmit}
-                        className="bg-[#0096FF] px-16 py-2 rounded-sm text-white font-medium"
+                        className="bg-[#0096FF] px-10 lg:px-16 py-2 rounded-sm text-white font-medium"
                     >
                         Submit
                     </button>
